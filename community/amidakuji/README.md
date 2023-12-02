@@ -37,6 +37,12 @@
 
 ## Build
 
+#### Windows (New)
+
+```
+$ go install github.com/go-bindata/go-bindata/go-bindata@latest
+```
+
 #### Windows
 
 ```

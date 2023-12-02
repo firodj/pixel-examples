@@ -7,14 +7,14 @@ GO_FILES := $(shell find . -name '*.go' | grep -v /vendor/)
 
 all: build build_windows
 
-${ASSET_TARGET}: 
+${ASSET_TARGET}:
 	go-bindata -o "${ASSET_TARGET}" -pkg "glossary" -prefix "${ASSET_SOURCE_DIR}" ${ASSET_SOURCE_DIR}/emoji ${ASSET_SOURCE_DIR}/karaoke ${ASSET_SOURCE_DIR}/NanumBarunGothic.ttf
 
 build: ${ASSET_TARGET}
-	go build -i -v -o ${OUT} -ldflags "-w -s -X main.version=${VERSION}"
+	go build -v -o ${OUT} -ldflags "-w -s -X main.version=${VERSION}"
 
 build_windows: ${ASSET_TARGET}
-	go build -i -v -o ${OUT}.exe -ldflags "-w -s -X main.version=${VERSION} -H windowsgui"
+	go build -v -o ${OUT}.exe -ldflags "-w -s -X main.version=${VERSION} -H windowsgui"
 
 run: build
 	./${OUT}
