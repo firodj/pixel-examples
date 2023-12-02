@@ -8,7 +8,7 @@ require (
 	github.com/go-gl/mathgl v1.1.0
 	github.com/golang/freetype v0.0.0-20170609003504-e2365dfdc4a0
 	github.com/gopxl/beep v1.0.0
-	github.com/gopxl/pixel/v2 v2.0.0-20231007231924-11d9ad9bbb56
+	github.com/gopxl/pixel/v2 v2.1.0
 	github.com/pkg/errors v0.9.1
 	github.com/pkg/profile v1.7.0
 	github.com/salviati/go-tmx v0.0.0-20180901011116-8dae25beffeb
@@ -30,5 +30,3 @@ require (
 	golang.org/x/mobile v0.0.0-20190415191353-3e0bab5405d6 // indirect
 	golang.org/x/sys v0.15.0 // indirect
 )
-
-replace github.com/gopxl/pixel/v2 => ../pixel
